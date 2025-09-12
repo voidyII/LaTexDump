@@ -3,5 +3,6 @@
 *.fls
 *.log
 *.synctex.gz
-Stellungnahme.pdf
-Stellungnahme.tex
+*.toc
+Stellungnahme/
+FS02_Portfolio/images/
