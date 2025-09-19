@@ -5,11 +5,25 @@
 \usepackage{etoolbox}
 \usepackage{setspace}
 \usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
 \usepackage[skip=0.5em]{caption}
 \usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 
 \renewcommand*\contentsname{Inhaltsverzeichnis}
 \renewcommand*\thesection{2.\arabic{section}}
+
+\newlength{\subsectionindent}
+\setlength{\subsectionindent}{4.2em}
+
+\newenvironment{indentedtext}[1][\subsectionindent]
+{%
+  \begingroup
+  \setlength{\leftskip}{#1}%
+}
+{%
+  \par\endgroup
+}
 
 \begin{document}
 
@@ -23,10 +37,10 @@
   {\thesubsection}{0.5em}{}
 \titlespacing*{\subsection}{1em}{*2}{*0.5}
 
-\makeatletter
-\pretocmd{\subsection}{\setlength{\leftskip}{4.2em}}{}{}
-\pretocmd{\section}{\setlength{\leftskip}{0pt}}{}{}
-\makeatother
+% \makeatletter
+% \pretocmd{\subsection}{\setlength{\leftskip}{4.2em}}{}{}
+% \pretocmd{\section}{\setlength{\leftskip}{0pt}}{}{}
+% \makeatother
 
 \begin{titlepage}
     \begin{center}
@@ -43,6 +57,7 @@
         %\textbf{Christopher Vitz}
 
         \vspace*{\fill}
+        Technisch-Gewerbliches Berufsbildungszentrum Saarbrücken \\
         \today
     \end{center}  
 \end{titlepage}
@@ -56,25 +71,62 @@
 }
 
 \newpage
-%sections in need of formatting to work with 12pt font size
 \section{Eine Einführung in die IT für Arbeitsplätze geben}
 \subsection{Eine Einführung in Grundfunktionen des Computers geben}
-    EVA-Grundprinzip der Datenverarbeitung:\\
-    E = Eingabe\\
-    V = Verarbeitung\\
-    A = Ausgabe
+    {
+    \vspace{0.5em}
+    \centering
+    \begin{tcolorbox}[width=9cm, title=EVA-Grundprinzip der Datenverarbeitung, coltitle=white, colframe=orange, colback=white!60!orange]
+        \begin{itemize}
+            \item[E =] Eingabe
+            \item[V =] Verarbeitung
+            \item[A =] Ausgabe
+        \end{itemize}
+    \end{tcolorbox}
+    }
+
+    % \begin{indentedtext}
+    %     EVA-Grundprinzip der Datenverarbeitung:\\
+    %     E = Eingabe\\
+    %     V = Verarbeitung\\
+    %     A = Ausgabe \\
+    % \end{indentedtext}
+
+    \vspace{-0.5em}
     \begin{figure}[h]
         \centering
-        \includegraphics[width=0.5\textwidth]{./images/2.1.1_konfiguration.png}
-        \caption{EVA-Prinzip Beispiel}
-        \label{fig:EVA-Prinzip}
-    \end{figure}\\
-    Konfiguration:\\
-    Bezeichnung für abgestimmte Zusammenstellung von Hardware und Software auf Nutzungszweck des Kunden.
+        \includegraphics[width=0.7\textwidth]{./images/2.1.1_konfiguration.png}
+        \caption{EVA-Prinzip Beispiel}\label{fig:EVA-Prinzip}
+    \end{figure}
+    \vspace{-1em}
+
+    {
+    \centering
+    \begin{tcolorbox}[width=13cm, title=Konfiguration, coltitle=white, colframe=white!20!blue, colback=white!80!blue]
+        Bezeichnung für abgestimmte Zusammenstellung von Hardware und Software auf Nutzungszweck des Kunden.
+    \end{tcolorbox}
+    }
+    \vspace{0.25em}
+
 \subsection{Bedeutende Entwicklungsschritte in der Computertechnik}
-    TODO
+    \vspace{0.5em}
+    \begin{itemize}[leftmargin=3cm]
+        \item[1980er:] IBM, 8Bit Prozessor, 64KB RAM
+        \item[1990er:] Open Source, Internet, Google
+        \item[2000er:] Open Office, Facebook
+        \item[2020er:] KI, 64Bit Prozessor, 64GB+ RAM
+        \item[2030er:] Quantencomputer
+    \end{itemize}
+
+\newpage
 \subsection{Entwicklungstrends präsentieren}
-    TODO
+    \vspace{-0.5em}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.7\textwidth]{./images/2.1.3_entwicklungstrend-digitalisierung.png}
+        \caption{Entwicklungstrend zur Digitalisierung}\label{fig:Entwicklungstrend_Digitalisierung}
+    \end{figure}
+    \vspace{-0.5em}
 \subsection{Komponentenhersteller und Systemarchitekturen präsentieren}
     TODO
 
