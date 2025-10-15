@@ -20,6 +20,7 @@
 {%
   \begingroup
   \setlength{\leftskip}{#1}%
+  \setlength{\parindent}{0pt}%
 }
 {%
   \par\endgroup
@@ -73,17 +74,14 @@
 \newpage
 \section{Eine Einführung in die IT für Arbeitsplätze geben}
 \subsection{Eine Einführung in Grundfunktionen des Computers geben}
-    {
     \vspace{0.5em}
-    \centering
-    \begin{tcolorbox}[width=9cm, title=EVA-Grundprinzip der Datenverarbeitung, coltitle=white, colframe=orange, colback=white!60!orange]
+    \begin{tcolorbox}[width=9cm, center, title=EVA-Grundprinzip der Datenverarbeitung, coltitle=white, colframe=orange, colback=white!60!orange]
         \begin{itemize}
             \item[E =] Eingabe
             \item[V =] Verarbeitung
             \item[A =] Ausgabe
         \end{itemize}
     \end{tcolorbox}
-    }
 
     % \begin{indentedtext}
     %     EVA-Grundprinzip der Datenverarbeitung:\\
@@ -98,14 +96,10 @@
         \includegraphics[width=0.7\textwidth]{./images/2.1.1_konfiguration.png}
         \caption{EVA-Prinzip Beispiel}\label{fig:EVA-Prinzip}
     \end{figure}
-    \vspace{-1em}
-
-    {
-    \centering
-    \begin{tcolorbox}[width=13cm, title=Konfiguration, coltitle=white, colframe=white!20!blue, colback=white!80!blue]
+    \vspace{-0.5em}
+    \begin{tcolorbox}[width=13cm, center, title=Konfiguration, coltitle=white, colframe=white!20!blue, colback=white!80!blue]
         Bezeichnung für abgestimmte Zusammenstellung von Hardware und Software auf Nutzungszweck des Kunden.
     \end{tcolorbox}
-    }
     \vspace{0.25em}
 \subsection{Bedeutende Entwicklungsschritte in der Computertechnik}
     \vspace{0.5em}
@@ -127,8 +121,11 @@
     \end{figure}
     \vspace{-0.5em}
 \subsection{Komponentenhersteller und Systemarchitekturen präsentieren}
-    Wichtige Hersteller in der heutigen Zeit:
-    \begin{itemize}
+    \begin{indentedtext}
+        Wichtige Hersteller in der heutigen Zeit:
+    \end{indentedtext}
+    \vspace{-0.5em}
+    \begin{itemize}[leftmargin=2.5cm]
         \item Intel (Prozessor Marktführer)
         \item AMD (Konkurrent zu Intel)
         \item NVIDIA (Größter Grafikkartenentwickler)
@@ -136,26 +133,80 @@
         \item Apple
         \item Microsoft (Betriebssystem Marktführer)
     \end{itemize}
-    {
     \vspace{0.5em}
-    \centering
-    \begin{tcolorbox}[width=15cm, title=Kompatibilität, coltitle=white, colframe=white!20!blue, colback=white!80!blue]
-        Bezeichnung für Verträglichkeit von Komponenten untereinander.
-        \begin{itemize}[leftmargin=4cm]
+    \begin{tcolorbox}[width=15cm, center, title=Kompatibilität, coltitle=white, colframe=white!20!blue, colback=white!80!blue]
+        Bezeichnung für Verträglichkeit von Komponenten zeinander.
+        \begin{itemize}[labelsep=1em, align=parleft, leftmargin=*, widest=Abwärtskompabilität, itemsep=0em]
             \item[Aufwärtskompabilität:] Vorgängerversionen funktionieren mit Nachfolgeversionen
             \item[Abwärtskompabilität: ] neuere Komponenten funktionieren mit Vorgängerversionen
         \end{itemize}
     \end{tcolorbox}
-    }
+%TODO REFLEXION
 
 \newpage
+%TODO Formatting
 \section{Das Leistungsportfolio im Ausbildungsbetrieb präsentieren}
 \subsection{Arbeitsplätze und Arbeitsumgebungen für IT-Systeme beschreiben}
-    TODO
+    \begin{indentedtext}
+        IT ist heutzutage sowohl im privaten sowie industriellen Kontext nicht wegzudenken. \\
+        Einsatzbereiche der IT:
+    \end{indentedtext}
+    \begin{itemize}[leftmargin=2.5cm, topsep=0.3em, itemsep=0.1em, parsep=0.5em]
+        \item Privat
+        \item Industrie
+        \item Wirtschaft
+        \item Verwaltung
+    \end{itemize}
+    \begin{indentedtext}
+        Formen von Arbeitsarten:
+    \end{indentedtext}
+    \begin{itemize}[leftmargin=2.5cm, topsep=0.3em, itemsep=0.1em, parsep=0.5em]
+        \item Telearbeiten: Arbeiten an einem eingerichteten Arbeitsplatz
+        \item mobiles Arbeiten: auch Homeoffice, Arbeit nicht an festen Arbeitsplatz gebunden
+    \end{itemize}
+    \begin{indentedtext}
+        Die Arbeitsplätze dieser Arten sind nach Bürokonzepten gestaltet und müssen ergonomische, ökologische und gesundheitliche Anforderungen berücksichtigen. \\
+        Formen von Arbeitsumgebungen:
+    \end{indentedtext}
+    \begin{itemize}[leftmargin=2.5cm, topsep=0.3em, itemsep=0.1em, parsep=0.5em]
+        \item Zellenbüros: Ein-/Mehrpersonenbüros entlang eines FLurs
+        \item Großraumbüros: Open-Space-Bürolandschaft
+        \item Kombibüro: Einzelbüros entlag der Fassade, Pausenraum dazwischen
+        \item Non-Territoriales Büro: Büroplätze werden von Mitarbeitern für Arbeitszeit gebucht
+    \end{itemize}
+    \begin{indentedtext}
+        Bei der Gestaltung der Arbeitsplätze muss auf genügend Beleuchtung (min. 500 Lux) sowie eine nicht zu hohe Lärmentwicklung (30-45dB) geachtet werden.
+    \end{indentedtext}
 \subsection{Marktgängige IT-Systeme vorstellen}
-    TODO
+    \begin{tcolorbox}[width=15cm, center, title=Konfiguration, coltitle=white, colframe=orange, colback=white!60!orange]
+        Bezeichnung für die Zusammenstellung, Einstellung und Abstimmung von Komponenten/Geräten/Programmen in Bezug auf Anwendung. \\
+        Unterscheidung vom Istzustand (Ist-Konfiguration) als aktuellem Stand und Sollzustand (Soll-Konfiguration) als Zielzustand.
+    \end{tcolorbox}
+    %TODO evtl die verschiedenen bauformen adden
+    \vspace{-1em}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.7\textwidth]{./images/2.2.2_pc-vergleich.png}
+        \caption{Unterscheidung der Leistungsfähigkeit}\label{fig:Leistungsfähigkeit_Unterscheidung}
+    \end{figure}
+    \begin{indentedtext}
+        IT-Hardware kann auf verschiedene Kriterien und Spezifikationen geprüft werden. \\
+        Dabei sind die folgenden von besonderer Bedeutung:
+    \end{indentedtext}
+    \begin{itemize}[leftmargin=2.5cm, topsep=0.3em, itemsep=0.1em, parsep=0.5em]
+        \item Quantitative Größen (messbare, objektive Größen)
+        \item Qualitative Größen (schwer messbare, subjektive Größen)
+        \item Vergleiche (Stress-/Benchmarktests, etc.)
+    \end{itemize}
+    \begin{indentedtext}
+        Desweiteren können zusätzliche Recherchen durchgeführt werden, etwa über das Internet (Fachportale, Blogs, etc.) oder Hardware-Tests und Diagnosetools.
+    \end{indentedtext}
 \subsection{Das Leistungsportfolio im IT-Bereich präsentieren}
-    TODO
+    \begin{indentedtext}
+        Das Leistungsportfolio eines Unternehmens beschreibt die Dientsleistungen und Tätigkeiten eines Betriebs. \\
+        Bei Unternehmen mit interner IT, ist die IT-Abteilung der Dienstleister der Mitarbeiter und Abteilungen. Die Mitarbeiter sind demnach interne Kunden.
+    \end{indentedtext}
+%TODO REFLEXION
 
 \newpage
 \section{Auswahlkriterien zu IT-Produkten allgemein unterscheiden}
