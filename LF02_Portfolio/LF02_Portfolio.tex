@@ -10,12 +10,14 @@
 \usepackage[skip=0.5em]{caption}
 \usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 
-\renewcommand*\contentsname{Inhaltsverzeichnis}
-\renewcommand*\thesection{2.\arabic{section}}
+\renewcommand*\contentsname{Inhaltsverzeichnis} %defines the name of the toc
+\renewcommand*\thesection{2.\arabic{section}} %defines a custom numbering for sections
 
+% sets new length variable, only used for custom environment
 \newlength{\subsectionindent}
 \setlength{\subsectionindent}{4.2em}
 
+%defines an environment that applies a custom indent to text inside
 \newenvironment{indentedtext}[1][\subsectionindent]
 {%
   \begingroup
@@ -28,16 +30,19 @@
 
 \begin{document}
 
+% applies a custom font and layout to sections
 \titleformat{\section}
   {\normalfont\Large\bfseries}
   {\thesection}{0.5em}{}
 \titlespacing*{\section}{0em}{*3}{*1}
 
+% applies a custom font and layout to subsections
 \titleformat{\subsection}
-  {\normalfont\large\bfseries}
-  {\thesubsection}{0.5em}{}
-\titlespacing*{\subsection}{1em}{*2}{*0.5}
+  {\normalfont\large\bfseries} % font
+  {\thesubsection}{0.5em}{} % section number and space between num and title
+\titlespacing*{\subsection}{1em}{*2}{*0.5} % spacing around titles
 
+% forces a fixed indent for EVERYTHING (applies to formatting of boxes and img)
 % \makeatletter
 % \pretocmd{\subsection}{\setlength{\leftskip}{4.2em}}{}{}
 % \pretocmd{\section}{\setlength{\leftskip}{0pt}}{}{}
@@ -64,10 +69,10 @@
 \end{titlepage}
 
 {
-\fontsize{12pt}{13pt}\selectfont
+\fontsize{12pt}{12.5pt}\selectfont
 \cftsetindents{section}{0em}{2.5em}
 \cftsetindents{subsection}{1em}{3em}
-%toc in need of formatting because book has wayyyy too long headings
+%toc in need of formatting (line spacing, font size, )
 \tableofcontents
 }
 
@@ -82,14 +87,6 @@
             \item[A =] Ausgabe
         \end{itemize}
     \end{tcolorbox}
-
-    % \begin{indentedtext}
-    %     EVA-Grundprinzip der Datenverarbeitung:\\
-    %     E = Eingabe\\
-    %     V = Verarbeitung\\
-    %     A = Ausgabe \\
-    % \end{indentedtext}
-
     \vspace{-0.5em}
     \begin{figure}[h]
         \centering
