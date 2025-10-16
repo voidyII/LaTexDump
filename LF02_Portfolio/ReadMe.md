@@ -10,10 +10,10 @@ Du führst während des gesamten Schuljahres ein persönliches Portfolio, in dem
 3. Ergänze Beispiele, Screenshots oder kleine Skizzen, wenn es den Inhalt verständlicher macht.
 4. Achte auf eine klare Struktur (z. B. Kapitelüberschriften, Unterpunkte, ggf. ein Inhaltsverzeichnis).
 5. Am Ende eines Kapitels/Abschnitts ergänzt du eine kurze Reflexion (2–3 Sätze):
-    - Was habe ich verstanden? \
-    - Wo habe ich noch Schwierigkeiten?\
+    - Was habe ich verstanden?
+    - Wo habe ich noch Schwierigkeiten?
     - Wie könnte ich den Inhalt im Beruf anwenden?
 
 ### Abgabe:
-Das Portfolio wird fortlaufend gepflegt und in regelmäßigen Abständen (z. B. alle 4 Wochen) zur Einsicht vorbereitet. \
+Das Portfolio wird fortlaufend gepflegt und in regelmäßigen Abständen (z. B. alle 4 Wochen) zur Einsicht vorbereitet.\
 Am Ende des Schuljahres sollte eine vollständige Version vorhanden sein.
