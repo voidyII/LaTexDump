@@ -52,6 +52,7 @@
             \item L2-Cache: größer und langsamer als L1, aber schneller als RAM
             \item L3-Cache: Datenabgleich Caches und Cores
         \end{itemize}
+        Die Geschwindigkeiten werden in Megatransfers per Second (MT/s) angegeben.
     \end{subindent}
 
     \begin{figure}[ht]
@@ -78,7 +79,43 @@
     \end{tcolorbox}
 
 \subsection{Schnittstellen und Anschlüsse am Mainboard erläutern}
-    TODO
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.7\textwidth]{./images/2.4.5_anschluesse.png}
+        \caption{Mainboard Anschlüsse}\label{fig:Mainboard Anschlüsse}
+    \end{figure}
+
+    \begin{tcolorbox}[width=15cm, center, title=Anschlüsse am Mainboard, coltitle=white, colframe=orange, colback=white!60!orange]
+        \begin{itemize}[itemsep=0.1em, parsep=0.3em]
+            \item Sockel\@: Ort in dem der Prozessor platziert wird
+            \item RAM-Steckplätze
+            \item PCI(e)-Steckplätze\@: Peripheral Component Interconnect Express (PCIe) \\ Anschluss von Zusatzkarten, verfügbare Steckplätze sind abhängig vom Motherboard
+            \item SATA-Anschlüsse\@: Verbindung von Festplatten und Laufwerken \\ Blaue SATA-Buchsen: 6 GBit/s, Abwärtskompatibel \\ Schwarze/Rote SATA-Buchsen: Herstellerabhängige Bedeutung
+            \item USB-Schnittstellen\@: Schnittstellen für USB-Ports
+            \item M.2-Port\@: Anschluss für SDD
+            \item Lüfteranschluss
+            \item Stromanschluss
+            \item Monitoranschlüsse
+            \item USB-Anschlüsse
+            \item P/S2-Port\@: Anschluss für ältere Mäuse und Tastaturen
+            \item LAN
+            \item Klinkenanschlüsse\@: Tonübertragung
+        \end{itemize}
+    \end{tcolorbox}
+
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.7\textwidth]{./images/2.4.5_pciespeeds.png}
+        \caption{PCIe Geschwindigkeiten}\label{fig:PCIe Geschwindigkeiten}
+    \end{figure}
+
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.7\textwidth]{./images/2.4.5_usbspeed.png}
+        \caption{USB Geschwindigkeiten}\label{fig:USB Geschwindigkeiten}
+    \end{figure}
+
+\newpage
 \subsection{Netzteile beschreiben und unterscheiden}
     TODO
 \subsection{Festplatten unterscheiden und erläutern}
