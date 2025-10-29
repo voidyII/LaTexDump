@@ -105,7 +105,7 @@
 
     \begin{figure}[ht]
         \centering
-        \includegraphics[width=0.7\textwidth]{./images/2.4.5_pciespeeds.png}
+        \includegraphics[width=0.9\textwidth]{./images/2.4.5_pciespeeds.png}
         \caption{PCIe Geschwindigkeiten}\label{fig:PCIe Geschwindigkeiten}
     \end{figure}
 
@@ -117,11 +117,77 @@
 
 \newpage
 \subsection{Netzteile beschreiben und unterscheiden}
-    TODO
+    \begin{subindent}
+        Netzteile (PSU - Power Supply Unit) versorgen den PC mit Strom. Sie wandeln Wechselstrom in den benötigten Gleichstrom um. \\
+        Vorraussetzungen für passende Netzteile:
+    \end{subindent}
+
+    \begin{itemize}[leftmargin=2.5cm, topsep=0.2em, itemsep=0.1em, parsep=0.3em]
+        \item passender Formfaktor (ATX, SFX, TFX, ITX)
+        \item genug Watt um alle Komponenten zu versorgen (ca. 120 bis 1800)
+        \item Kühlungsmöglichkeiten\@: \\ -passiv: geräuschlos, aber niedrige Wattleistung \\ -aktiv: eingebauter Lüfter, mehr Leistung
+    \end{itemize}
+
 \subsection{Festplatten unterscheiden und erläutern}
-    TODO
+    \begin{subindent}
+        Zum Erhalt von Daten nach dem Herunterfahren werden externe Speicher benötigt. Diese Festplatten müssen leistungsmäßig an die anderen Komponenten des Systems angepasst werden.
+        Meist werden erwerbbare Festplatten vorformatiert, d.h. Spuren, Sektoren und Dateisystem kommen voreingerichtet. Primäres Dateisystem auf Windows: NTFS
+    \end{subindent}
+
+    \begin{tcolorbox}[width=15cm, center, title=Arten von Festplatten, coltitle=white, colframe=orange, colback=white!60!orange]
+        \begin{itemize}[itemsep=0.1em, parsep=0.3em]
+            \item HDD\@: Hard Disk Drive \\ Dateispeicher über Schreib-Leseköpfe an drehenden, magnetischen Metallscheiben \\ langsamer, billiger als SSD
+            \item SDD\@: Solid State Drive \\ unbeweglicher Block als Flash-Speicher \\ bis zu 3x so schnell wie HDDs, geräuschlos
+            \item SSHD\@: Hybrid-Laufwerke \\ Daten auf HDD, Speicherung zur Verarbeitung auf SSD \\ bis zu 5x so schnell wie HDDs
+            \item USB-Sticks\@: Flash-Speicher \\ klein, leise und mobil
+        \end{itemize}
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[width=15cm, center, title=Spezifikationen von Festplatten, coltitle=white, colframe=orange, colback=white!60!orange]
+        \begin{itemize}[itemsep=0.1em, parsep=0.3em]
+            \item Bauform\@: \\ HDD\@: 1,8/2,5 Zoll für Notebooks; sonst 3,5 Zoll \\ SSD\@: intern als Speicherriegel, extern 2,5/3,5 Zoll
+            \item Performance\@: abhängig von mittlerer Zugriffszeit, Datentransferrate und Schnittstellenleistung
+            \item Umdrehungsgeschwindigkeit HDD\@: bis zu 15000rpm (Standard: 7200rpm)
+            \item Datentransferrate\@: siehe nachfolgende Tabelle
+            \item Cache\@: eingebauter Zwischenspeicher
+            \item Partitionierung\@: Speicherplatz wird in sperate Datenbereiche geteilt
+            \item NAND-Technologien\@: \\ -SLC (Single Level Cell): jede Zelle speichert ein Bit \\ -MLC (Multi Level Cell): jede Zelle zwei Bits \\ -TLC (Triple Level Cell): jede Zelle drei Bits \\ -QLC {Quadruple Level Cells}: jede Zelle vier Bits
+        \end{itemize}
+    \end{tcolorbox}
+
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.8\textwidth]{./images/2.4.7_datentransferrate.png}
+        \caption{Datentransferrate von Schnittstellen}\label{fig:Datentransferrate}
+    \end{figure}
+
+    \begin{subindent}
+        NAS (Network Attached Storage) kann als Fileserverlösung benutzt werden um vor Ort Daten an mehreren Geräten zur Verfügung zu stellen.
+        Alternativ können auch Cloud-Lösungen in Betracht gezogen werden. WLAN-Festplatten können verwendet werden wenn kein WLAN zur Verfügung steht.
+    \end{subindent}
+
+    \begin{tcolorbox}[width=15cm, center, title=NAS SAN und DAS, coltitle=white, colframe=orange, colback=white!60!orange]
+        \begin{itemize}[itemsep=0.1em, parsep=0.3em]
+            \item NAS\@: Network Attached Storage \\ eigenständiger Fileserver für ein Netzwerk
+            \item SAN\@: Storage Area Network \\ Speichernetzwerk, dass mehrere Speicher verschiedener Orte zusammenfasst
+            \item DAS\@: Direct Attached Storage \\ Speicher direkt und exklusiv mit einem Rechner verbunden
+        \end{itemize}
+    \end{tcolorbox}
+
 \subsection{Tastaturen unterscheiden und präsentieren}
-    TODO
+    \begin{subindent}
+        Eine kurze Auflistung von verschiedenen Leistungskriterien, die betrachtet werden sollten bei Anschaffung einer Tastatur:
+    \end{subindent}
+
+    \begin{itemize}[leftmargin=2.5cm, topsep=0.2em, itemsep=0.1em, parsep=0.3em]
+        \item Tastatur-Layout (z.B. QWERTZ in Deutschland)
+        \item Tastenanzahl (78 ohne, 104 mit Num-Pad)
+        \item Funk- oder Kabelgebunden, Virtuell
+        \item Ergonomität (Handballenauflagen, Tastaturständer, Form)
+        \item Haltbarkeit (Tastaturanschläge)
+        \item Reinigungs-/Hygieneeigenschaften
+    \end{itemize}
+
 \subsection{Monitore vergleichen und präsentieren}
     TODO
 \subsection{Leistungsmerkmale für Drucker und Zusatzanforderungen erläutern}
