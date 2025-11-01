@@ -1,5 +1,6 @@
 \documentclass[11pt]{article}
 \usepackage[ngerman]{babel}
+\usepackage{float}
 \usepackage{tocloft}
 \usepackage{titlesec}
 \usepackage{etoolbox}
@@ -18,6 +19,12 @@
 \setlength{\subsectionindent}{4.2em}
 \newlength{\reflexionindent}
 \setlength{\reflexionindent}{2.2em}
+
+%sets space around floats
+\setlength{\intextsep}{0pt}
+\setlength{\textfloatsep}{0pt}
+\setlength{\floatsep}{0pt}
+
 
 %defines an environment that applies a custom indent to text inside
 \newenvironment{subindent}[1][\subsectionindent]
