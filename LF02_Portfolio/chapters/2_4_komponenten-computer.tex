@@ -1,6 +1,25 @@
 \section{Komponenten eines Arbeitsplatzcomputers unterscheiden}
 \subsection{Zentraleinheit, Mainboard und Betriebssystem unterscheiden}
-    TODO
+    \begin{subindent}
+        Die Zentraleinheit bezeichnet das Mainboard mit den darauf angebrachten Komponenten:
+        \begin{itemize}[leftmargin=2.5cm, topsep=0.2em, itemsep=0.1em, parsep=0.3em]
+            \item Prozessor\@: wichtigste Komponente, Verarbeitung der Daten findet hier statt (s. 2.4.3)
+            \item Arbeistspeicher\@: flüchtiger Zwischenspeicher zum schnellen Zugriff durch die CPU (s. 2.4.4)
+            \item ROM\@: Read-Only-Memory, enthält Grundbetriebssytem\@: \\
+                  BIOS: Basic-Input-Output-System, Firmware für Start des eigentlichen Betriebssystems und Basissteuerung der Hardware \\
+                  UEFI: Unified Extensible Firmware Interface, eigenes Betriebssystem, wodurch Updates geladen werden können \\
+                  UEFI löst das `veraltete' BIOS ab
+        \end{itemize}
+        Nach aufruf des ROM wird das Betriebssystem gestartet. Dies führt die GUI (Bedienoberfläche) aus und wird von Takten, die durch den Taktgeber innerhalb der CPU (Clock) gegeben werden, bearbeitet.
+        Das Betriebssystem führt verschiedene Anwenderprogramme aus. Da Kompatibilität eines Programms nicht für jedes Betriebssystem gegeben ist, können Virtual Machine Monitors (VMMs) verwendet werden.
+        Auf diesen kann ein Gastbetriebssystem installiert werden, welches virtuell die benötigten Hardwareressourcen zur Verfügung bekommt. Dies nennt man auch Betriebssystem-Virtualisierung und erfordert die Installation eines Virtualisierungs-Hypervisor.
+    \end{subindent}
+
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.7\textwidth]{./images/2.4.1_computerkonfig.png}
+        \caption{Beispiel Computerkonfiguration}\label{fig:Computerkonfiguration}
+    \end{figure}
 
 \subsection{Hauptplatine, Mainboard und die Komponenten unterscheiden}
     \begin{figure}[ht]
@@ -35,7 +54,38 @@
 
 \newpage
 \subsection{Prozessoren genauer beschreiben}
-    TODO
+    \begin{subindent}
+        Der Mikroprozessor ist die wichtigste Komponente. Sie ist nur so schnell wie die schwächste, mit ihr verbundene Komponente auf dem Motherboard.
+        Die größten Prozessorhersteller sind AMD und Intel, welche sich im ständigen Wettbewerb um die Leistungstärkste CPU befinden. \\
+        Begriffserklärung\@: \\
+        Der Mikroprozessor (CPU = Central Processing Unit) holt Befehle aus dem Zwischenspeicher und steuert mit der Ausführung dieser die Verarbeitung, Steuerung und Kontrolle von Daten und Systemen.
+    \end{subindent}
+
+    \begin{tcolorbox}[width=15cm, center, title=CPU Begriffe, coltitle=white, colframe=orange, colback=white!60!orange]
+        \begin{itemize}[itemsep=0.1em, parsep=0.3em]
+            \item Bestandteile\@: \\
+                  ALU (Arithmetic Logic Unit)\@: Rechenwerk \\
+                  CU (Control Unit)\@: Steuereinheit \\
+                  MMU (Memory Management Unit)\@: Speichermanager \\
+                  CPU-Cache\@: Zwischenspeicher
+            \item Prozessorarchitekturen\@: erhalten Codenamen von den Herstellern
+            \item Strukturgröße\@: bei Intel 7nm, bei AMD bereits 5nm; je kleiner die Angabe desto leistungstärker die CPU
+            \item Cache\@: Schneller Zwischenspeicher der CPU entlastet (s. 2.4.4)
+            \item Chipsatz\@: Halbleiterbaustein der die Komponenten untereinander verbindet, Anzahl der anzubindenden Komponenten daher sehr wichtig
+            \item Erhöhung der Taktfrequenz\@: die maximale Taktfrequenz kann durch Übertaktung erhöht werden, ist mit Erhöhung des Energieverbrauchs, Wärmeentwicklung und Kühlerlautstärke verbunden
+            \item Parallelisierung\@: \\
+                  Multi-Threading\@: mehrere Programmabläufe (Threads) gleichzeitig \\
+                  Pipelining\@: parallele Befehlsausführung \\
+                  Coprozessor\@: Entlastung bei bestimmten Aufgaben und Funktionen durch spezielle CPU \\
+                  Multi-Prozessor\@: mehrere CPUs, selten bei PCs (eher Industrieanwendung) \\
+                  Multi-Core-Prozessor\@: mehrere Cores (Rechenkerne) innerhalb der CPU \\
+            \item Turbo Boost/Precision Boost\@: automatische Übertaktung bei Multi-Core-CPUs ohne negativen Effekte der aktiven Übertaktung (unterhalb der TDP-Grenze)
+            \item Multimedia-Erweiterung: Hersteller stellen Befehlsätze (MMX, XMM, SEE) zur Verfügung um höhere Anforderungen (z.B. Spielsoftware) zu entsprechen
+            \item TDP\@: Thermal Design Power, maximale Wärmeleistung der CPU
+            \item GPGPU\@: General Purpose Computation on Graphics Processing Unit, Programmierschnittstelle um leistungsintensive Berechnungen auf Grafikkarte auszuführen
+        \end{itemize}
+    \end{tcolorbox}
+    
 
 \subsection{Arbeistspeicher (RAM-Speicher) erläutern}
     \begin{subindent}
