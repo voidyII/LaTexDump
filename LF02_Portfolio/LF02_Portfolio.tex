@@ -28,6 +28,7 @@
 
 
 %defines an environment that applies a custom indent to text inside
+%exlclusively used for subsection text
 \newenvironment{subindent}[1][\subsectionindent]
 {%
   \begingroup
@@ -39,6 +40,7 @@
 }
 
 %defines an environment that applies a custom indent to text inside
+%exclusively used for reflexion subsection text
 \newenvironment{refindent}[1][\reflexionindent]
 {%
   \begingroup
@@ -67,12 +69,6 @@
   {\normalfont\large\bfseries} % font
   {\thesubsection}{0.5em}{} % section number and space between num and title
 \titlespacing*{\subsection}{1em}{*2}{*0.5} % spacing around titles
-
-% forces a fixed indent for EVERYTHING (applies to formatting of boxes and img)
-% \makeatletter
-% \pretocmd{\subsection}{\setlength{\leftskip}{4.2em}}{}{}
-% \pretocmd{\section}{\setlength{\leftskip}{0pt}}{}{}
-% \makeatother
 
 \input{chapters/2_0_title.tex}
 
